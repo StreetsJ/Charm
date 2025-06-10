@@ -1,23 +1,9 @@
-#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <optional>
 #include <cassert>
 #include <vector>
-
-enum class TokenType {
-	int_lit = 1,
-	assignment,
-	num,
-	_return,
-	op_add,
-	op_sub
-};
-
-struct Token {
-	TokenType type;
-	std::optional<std::string> value;
-};
+#include "tokenizer.h"
 
 std::vector<char> tokenList = {'+', '-'};
 
@@ -99,11 +85,11 @@ std::vector<Token> tokenize(const std::string& str) {
 	return newTokens;
 }
 
-int main(int argc, char** argv) {
-	if (argc < 2) {
-		std::cerr << "Please enter input to be tokenized" << std::endl;
-		return 1;
-	}
-	tokenize(argv[1]);
-	return 0;
-}
+//int main(int argc, char** argv) {
+//	if (argc < 2) {
+//		std::cerr << "Please enter input to be tokenized" << std::endl;
+//		return 1;
+//	}
+//	tokenize(argv[1]);
+//	return 0;
+//}
