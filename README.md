@@ -2,7 +2,7 @@
 
 Build
 - g++
-- will include make file eventually when linking of all compiler parts are complete
+- will include CMake build process eventually when linking of all compiler parts are complete
 
 Progress
 - Tokenizer works for 4 tokens currently
